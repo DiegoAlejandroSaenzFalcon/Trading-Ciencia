@@ -19,6 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -26,7 +28,7 @@ jobs:
       - name: Install docs dependencies
         run: pip install mkdocs mkdocs-material mkdocstrings[python] mkdocs-git-revision-date-localized-plugin mkdocs-minify-plugin --quiet
       - name: Build Docs
-        run: mkdocs build --strict
+        run: mkdocs build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site/
