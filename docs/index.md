@@ -1,11 +1,11 @@
-# Trading Science Framework
+﻿# Trading Science Framework
 
 > **Marco de Investigación Científica Aplicada al Trading — Libre, Honesto, Verificable**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![Status: Alpha](https://img.shields.io/badge/status-alpha-orange.svg)](https://github.com/DiegoSaenz/trading-science-framework)
-[![GitHub Pages](https://img.shields.io/badge/docs-github_pages-brightgreen.svg)](https://diegosaenz.github.io/trading-science-framework/)
+[![Status: Alpha](https://img.shields.io/badge/status-alpha-orange.svg)](https://github.com/DiegoAlejandroSaenzFalcon/trading-science-framework)
+[![GitHub Pages](https://img.shields.io/badge/docs-github_pages-brightgreen.svg)](https://diegoalejandrosaenzfalcon.github.io/trading-science-framework/)
 
 ---
 
@@ -30,7 +30,7 @@ Es un **marco de investigación** para que **cualquier persona**, desde cero, pu
 
 ```bash
 # 1. Clonar
-git clone https://github.com/DiegoSaenz/trading-science-framework.git
+git clone https://github.com/DiegoAlejandroSaenzFalcon/trading-science-framework.git
 cd trading-science-framework
 
 # 2. Entorno virtual
@@ -120,22 +120,22 @@ El framework **no impone ninguna estrategia**. Incluye implementaciones de refer
 
 ## Documentación
 
-- **Web (GitHub Pages):** https://diegosaenz.github.io/trading-science-framework/
+- **Web (GitHub Pages):** https://diegoalejandrosaenzfalcon.github.io/trading-science-framework/
 - **Local:** `mkdocs serve` → http://localhost:8000
 
 ---
 
 ## Autor
 
-**Diego Saenz** — Investigador independiente, trader retail, desarrollador.  
-GitHub: [@DiegoSaenz](https://github.com/DiegoSaenz)
+**Diego Alejandro Saenz Falcon** — Investigador independiente, trader retail, desarrollador.  
+GitHub: [@DiegoAlejandroSaenzFalcon](https://github.com/DiegoAlejandroSaenzFalcon)
 
 ---
 
 ## Licencia
 
 **MIT License** — Libre uso, modificación, distribución, uso comercial.  
-**Requisito único:** Atribución a **Diego Saenz** como autor original.
+**Requisito único:** Atribución a **Diego Alejandro Saenz Falcon** como autor original.
 
 ---
 

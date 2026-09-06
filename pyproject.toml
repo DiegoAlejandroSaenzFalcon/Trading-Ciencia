@@ -1,4 +1,4 @@
-[project]
+﻿[project]
 name = "trading-science-framework"
 version = "0.1.0"
 description = "Marco de Investigación Científica Aplicada al Trading — Libre, Honesto, Verificable"
@@ -6,10 +6,10 @@ readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.11"
 authors = [
-    {name = "Diego Saenz", email = "diego.saenz@users.noreply.github.com"}
+    {name = "Diego Alejandro Saenz Falcon", email = "diegoalejandrosaenzfalcon@users.noreply.github.com"}
 ]
 maintainers = [
-    {name = "Diego Saenz", email = "diego.saenz@users.noreply.github.com"}
+    {name = "Diego Alejandro Saenz Falcon", email = "diegoalejandrosaenzfalcon@users.noreply.github.com"}
 ]
 keywords = [
     "trading",
@@ -98,10 +98,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://diegosaenz.github.io/trading-science-framework/"
-Repository = "https://github.com/DiegoSaenz/trading-science-framework"
-Issues = "https://github.com/DiegoSaenz/trading-science-framework/issues"
-Documentation = "https://diegosaenz.github.io/trading-science-framework/"
+Homepage = "https://diegoalejandrosaenzfalcon.github.io/trading-science-framework/"
+Repository = "https://github.com/DiegoAlejandroSaenzFalcon/trading-science-framework"
+Issues = "https://github.com/DiegoAlejandroSaenzFalcon/trading-science-framework/issues"
+Documentation = "https://diegoalejandrosaenzfalcon.github.io/trading-science-framework/"
 
 [project.optional-dependencies]
 dev = [

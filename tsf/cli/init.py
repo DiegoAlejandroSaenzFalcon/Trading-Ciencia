@@ -1,4 +1,4 @@
-"""
+﻿"""
 CLI Inicialización del proyecto.
 
 Crea estructura completa, configs, templates, y verifica instalación.
@@ -312,7 +312,7 @@ def _create_research_templates(force: bool) -> None:
   },
   "status": "draft",
   "metadata": {
-    "author": "Diego Saenz",
+    "author": "Diego Alejandro Saenz Falcon",
     "framework_version": "0.1.0"
   }
 }

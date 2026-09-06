@@ -1,8 +1,8 @@
-"""
+﻿"""
 KalmanATR Scalper — Reference Implementation (Port from MQL5)
 
 ORIGINAL: KalmanATR_Scalper.mq5 (MetaTrader 5 EA)
-AUTHOR: Diego Saenz (Monetizacion 48h - open source)
+AUTHOR: Diego Alejandro Saenz Falcon (Monetizacion 48h - open source)
 LICENSE: MIT
 
 ⚠️  IMPORTANTE: Esta es una ESTRATEGIA DE REFERENCIA HISTÓRICA.

@@ -1,4 +1,4 @@
-"""
+﻿"""
 CLI Fase 2: Investigación — Hipótesis, pipelines, pre-registro.
 
 Comandos:
@@ -64,7 +64,7 @@ def create_hypothesis(
         "falsification_contract": kill_data,
         "status": "draft",  # draft -> preregistered -> tested -> adjudicated
         "metadata": {
-            "author": "Diego Saenz",
+            "author": "Diego Alejandro Saenz Falcon",
             "framework_version": "0.1.0",
         }
     }

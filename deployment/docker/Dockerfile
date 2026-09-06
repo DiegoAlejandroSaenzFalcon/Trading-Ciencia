@@ -1,4 +1,4 @@
-# Trading Science Framework - Multi-stage Docker Build
+﻿# Trading Science Framework - Multi-stage Docker Build
 #
 # Stage 1: Builder - Install dependencies, compile
 # Stage 2: Runtime - Minimal, non-root, read-only filesystem
@@ -25,10 +25,10 @@ LABEL org.opencontainers.image.title="Trading Science Framework" \
       org.opencontainers.image.version="${VERSION}" \
       org.opencontainers.image.created="${BUILD_DATE}" \
       org.opencontainers.image.revision="${VCS_REF}" \
-      org.opencontainers.image.authors="Diego Saenz" \
+      org.opencontainers.image.authors="Diego Alejandro Saenz Falcon" \
       org.opencontainers.image.licenses="MIT" \
-      org.opencontainers.image.source="https://github.com/DiegoSaenz/trading-science-framework" \
-      org.opencontainers.image.documentation="https://diegosaenz.github.io/trading-science-framework/"
+      org.opencontainers.image.source="https://github.com/DiegoAlejandroSaenzFalcon/trading-science-framework" \
+      org.opencontainers.image.documentation="https://diegoalejandrosaenzfalcon.github.io/trading-science-framework/"
 
 # Install system dependencies for building
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -65,7 +65,7 @@ LABEL org.opencontainers.image.title="Trading Science Framework" \
       org.opencontainers.image.version="${VERSION}" \
       org.opencontainers.image.created="${BUILD_DATE}" \
       org.opencontainers.image.revision="${VCS_REF}" \
-      org.opencontainers.image.authors="Diego Saenz" \
+      org.opencontainers.image.authors="Diego Alejandro Saenz Falcon" \
       org.opencontainers.image.licenses="MIT"
 
 # Install runtime-only system dependencies

@@ -1,9 +1,9 @@
-#!/bin/bash
+﻿#!/bin/bash
 # =============================================================================
 # Trading Science Framework - VPS Setup Script
 #
 # Uso en VPS fresco (Ubuntu 22.04/24.04 LTS):
-#   curl -fsSL https://raw.githubusercontent.com/DiegoSaenz/trading-science-framework/main/deployment/scripts/setup-vps.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/DiegoAlejandroSaenzFalcon/trading-science-framework/main/deployment/scripts/setup-vps.sh | bash
 #   O clona el repo y ejecuta: ./deployment/scripts/setup-vps.sh
 #
 # Requiere: root/sudo, Ubuntu 22.04+, 2GB RAM mínimo, 20GB disco
@@ -32,7 +32,7 @@ fi
 # Configuración
 TSF_USER="tsf"
 TSF_DIR="/opt/tsf"
-REPO_URL="https://github.com/DiegoSaenz/trading-science-framework.git"
+REPO_URL="https://github.com/DiegoAlejandroSaenzFalcon/trading-science-framework.git"
 BRANCH="main"
 
 log_info "=== Trading Science Framework - VPS Setup ==="

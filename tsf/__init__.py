@@ -1,17 +1,17 @@
-"""
+﻿"""
 Trading Science Framework (TSF)
 
 Marco de Investigación Científica Aplicada al Trading — Libre, Honesto, Verificable.
 
-Author: Diego Saenz
+Author: Diego Alejandro Saenz Falcon
 License: MIT
 Version: 0.1.0
 """
 
 __version__ = "0.1.0"
-__author__ = "Diego Saenz"
+__author__ = "Diego Alejandro Saenz Falcon"
 __license__ = "MIT"
-__url__ = "https://github.com/DiegoSaenz/trading-science-framework"
+__url__ = "https://github.com/DiegoAlejandroSaenzFalcon/trading-science-framework"
 
 from .config import settings
 

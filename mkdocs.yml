@@ -1,11 +1,11 @@
-site_name: Trading Science Framework
-site_url: https://diegosaenz.github.io/trading-science-framework/
+﻿site_name: Trading Science Framework
+site_url: https://diegoalejandrosaenzfalcon.github.io/trading-science-framework/
 site_description: Marco de Investigación Científica Aplicada al Trading — Libre, Honesto, Verificable
-site_author: Diego Saenz
-copyright: Copyright &copy; 2026 Diego Saenz - MIT License
+site_author: Diego Alejandro Saenz Falcon
+copyright: Copyright &copy; 2026 Diego Alejandro Saenz Falcon - MIT License
 
-repo_url: https://github.com/DiegoSaenz/trading-science-framework
-repo_name: DiegoSaenz/trading-science-framework
+repo_url: https://github.com/DiegoAlejandroSaenzFalcon/trading-science-framework
+repo_name: DiegoAlejandroSaenzFalcon/trading-science-framework
 edit_uri: edit/main/docs/
 
 theme:
@@ -82,9 +82,9 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/DiegoSaenz
+      link: https://github.com/DiegoAlejandroSaenzFalcon
     - icon: fontawesome/brands/github
-      link: https://github.com/DiegoSaenz/trading-science-framework
+      link: https://github.com/DiegoAlejandroSaenzFalcon/trading-science-framework
   generator: false
   version:
     provider: mike

@@ -1,4 +1,4 @@
-# Guía de Inicio Rápido
+﻿# Guía de Inicio Rápido
 
 > **Tiempo estimado: 30-60 minutos para setup completo**
 
@@ -19,7 +19,7 @@
 
 ```bash
 # Clonar repositorio
-git clone https://github.com/DiegoSaenz/trading-science-framework.git
+git clone https://github.com/DiegoAlejandroSaenzFalcon/trading-science-framework.git
 cd trading-science-framework
 
 # Crear entorno virtual aislado
