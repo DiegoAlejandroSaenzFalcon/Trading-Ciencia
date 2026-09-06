@@ -27,8 +27,8 @@ LABEL org.opencontainers.image.title="Trading Science Framework" \
       org.opencontainers.image.revision="${VCS_REF}" \
       org.opencontainers.image.authors="Diego Alejandro Saenz Falcon" \
       org.opencontainers.image.licenses="MIT" \
-      org.opencontainers.image.source="https://github.com/DiegoAlejandroSaenzFalcon/trading-science-framework" \
-      org.opencontainers.image.documentation="https://diegoalejandrosaenzfalcon.github.io/trading-science-framework/"
+      org.opencontainers.image.source="https://github.com/DiegoAlejandroSaenzFalcon/Trading-Ciencia" \
+      org.opencontainers.image.documentation="https://diegoalejandrosaenzfalcon.github.io/Trading-Ciencia/"
 
 # Install system dependencies for building
 RUN apt-get update && apt-get install -y --no-install-recommends \

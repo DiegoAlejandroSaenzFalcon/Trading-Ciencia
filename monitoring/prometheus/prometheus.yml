@@ -11,7 +11,7 @@ global:
   scrape_interval: 15s
   evaluation_interval: 15s
   external_labels:
-    project: 'trading-science-framework'
+    project: 'Trading-Ciencia'
     environment: '${TSF_ENV:-development}'
 
 alerting:

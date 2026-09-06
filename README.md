@@ -4,8 +4,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![Status: Alpha](https://img.shields.io/badge/status-alpha-orange.svg)](https://github.com/DiegoAlejandroSaenzFalcon/trading-science-framework)
-[![GitHub Pages](https://img.shields.io/badge/docs-github_pages-brightgreen.svg)](https://diegoalejandrosaenzfalcon.github.io/trading-science-framework/)
+[![Status: Alpha](https://img.shields.io/badge/status-alpha-orange.svg)](https://github.com/DiegoAlejandroSaenzFalcon/Trading-Ciencia)
+[![GitHub Pages](https://img.shields.io/badge/docs-github_pages-brightgreen.svg)](https://diegoalejandrosaenzfalcon.github.io/Trading-Ciencia/)
 
 ---
 
@@ -52,8 +52,8 @@ Es un **marco de investigación** para que **cualquier persona**, desde cero, pu
 
 ```bash
 # Clonar repositorio
-git clone https://github.com/DiegoAlejandroSaenzFalcon/trading-science-framework.git
-cd trading-science-framework
+git clone https://github.com/DiegoAlejandroSaenzFalcon/Trading-Ciencia.git
+cd Trading-Ciencia
 
 # Crear entorno virtual
 python -m venv .venv
@@ -91,7 +91,7 @@ tsf --help
 ## Estructura del Proyecto
 
 ```
-trading-science-framework/
+Trading-Ciencia/
 ├── data/                    # Datos crudos + PIT rebuilt (gitignored)
 │   ├── raw/                 # OANDA streaming dumps
 │   ├── pit/                 # pit-adjuster outputs (hfq)
@@ -215,7 +215,7 @@ El framework **no impone ninguna estrategia**. Incluye implementaciones de refer
 
 ## Documentación
 
-- **Web (GitHub Pages):** https://diegoalejandrosaenzfalcon.github.io/trading-science-framework/
+- **Web (GitHub Pages):** https://diegoalejandrosaenzfalcon.github.io/Trading-Ciencia/
 - **Local:** `mkdocs serve` → http://localhost:8000
 - **PDF:** `mkdocs build` → `site/` → imprimir a PDF
 

@@ -1,4 +1,4 @@
-# Trading Science Framework - CI/CD Pipeline
+﻿# Trading Science Framework - CI/CD Pipeline
 #
 # Fail-fast, scientific rigor: lint → types → tests → governance gates
 # Solo pasa a deployment si TODOS los gates pasan
@@ -283,7 +283,7 @@ jobs:
           file: deployment/docker/Dockerfile
           push: false
           load: true
-          tags: trading-science-framework:${{ github.sha }}
+          tags: Trading-Ciencia:${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
@@ -293,7 +293,7 @@ jobs:
 
       - name: Test Docker Image
         run: |
-          docker run --rm trading-science-framework:${{ github.sha }} tsf --check-config
+          docker run --rm Trading-Ciencia:${{ github.sha }} tsf --check-config
 
   # ============================================================
   # SECURITY SCAN

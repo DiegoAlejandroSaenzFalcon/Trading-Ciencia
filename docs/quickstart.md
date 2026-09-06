@@ -19,8 +19,8 @@
 
 ```bash
 # Clonar repositorio
-git clone https://github.com/DiegoAlejandroSaenzFalcon/trading-science-framework.git
-cd trading-science-framework
+git clone https://github.com/DiegoAlejandroSaenzFalcon/Trading-Ciencia.git
+cd Trading-Ciencia
 
 # Crear entorno virtual aislado
 python -m venv .venv

@@ -1,5 +1,5 @@
 ﻿[project]
-name = "trading-science-framework"
+name = "Trading-Ciencia"
 version = "0.1.0"
 description = "Marco de Investigación Científica Aplicada al Trading — Libre, Honesto, Verificable"
 readme = "README.md"
@@ -98,10 +98,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://diegoalejandrosaenzfalcon.github.io/trading-science-framework/"
-Repository = "https://github.com/DiegoAlejandroSaenzFalcon/trading-science-framework"
-Issues = "https://github.com/DiegoAlejandroSaenzFalcon/trading-science-framework/issues"
-Documentation = "https://diegoalejandrosaenzfalcon.github.io/trading-science-framework/"
+Homepage = "https://diegoalejandrosaenzfalcon.github.io/Trading-Ciencia/"
+Repository = "https://github.com/DiegoAlejandroSaenzFalcon/Trading-Ciencia"
+Issues = "https://github.com/DiegoAlejandroSaenzFalcon/Trading-Ciencia/issues"
+Documentation = "https://diegoalejandrosaenzfalcon.github.io/Trading-Ciencia/"
 
 [project.optional-dependencies]
 dev = [
