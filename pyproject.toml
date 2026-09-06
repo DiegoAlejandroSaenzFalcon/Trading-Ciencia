@@ -36,10 +36,7 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Information Analysis",
     "Topic :: Scientific/Engineering :: Mathematics"
 ]
-urls.Homepage = "https://diegosaenz.github.io/trading-science-framework/"
-urls.Repository = "https://github.com/DiegoSaenz/trading-science-framework"
-urls.Issues = "https://github.com/DiegoSaenz/trading-science-framework/issues"
-urls.Documentation = "https://diegosaenz.github.io/trading-science-framework/"
+
 dependencies = [
     # Core scientific stack
     "numpy>=1.26.0",
@@ -100,6 +97,12 @@ dependencies = [
     "tenacity>=8.2.0",
 ]
 
+[project.urls]
+Homepage = "https://diegosaenz.github.io/trading-science-framework/"
+Repository = "https://github.com/DiegoSaenz/trading-science-framework"
+Issues = "https://github.com/DiegoSaenz/trading-science-framework/issues"
+Documentation = "https://diegosaenz.github.io/trading-science-framework/"
+
 [project.optional-dependencies]
 dev = [
     "ruff>=0.5.0",
@@ -150,10 +153,7 @@ line-length = 100
 target-version = "py311"
 select = ["E", "F", "I", "N", "W", "UP", "B", "C4", "ARG", "PTH", "PL", "TRY", "SIM", "TID", "RET"]
 ignore = ["S101", "ARG001", "ARG002"]
-per-file-ignores = {
-    "tests/*": ["S101", "ARG001", "ARG002"],
-    "examples/*": ["S101", "T201"]
-}
+per-file-ignores = { "tests/*" = ["S101", "ARG001", "ARG002"], "examples/*" = ["S101", "T201"] }
 
 [tool.ruff.format]
 quote-style = "double"
@@ -209,76 +209,8 @@ hooks = [
     {id = "pytest", name = "pytest", entry = "pytest", language = "system", types = ["python"], stages = ["commit"]},
 ]
 
-[tool.mkdocs]
-site_name = "Trading Science Framework"
-site_url = "https://diegosaenz.github.io/trading-science-framework/"
-repo_url = "https://github.com/DiegoSaenz/trading-science-framework"
-repo_name = "DiegoSaenz/trading-science-framework"
-edit_uri = "edit/main/docs/"
-copyright = "Copyright &copy; 2026 Diego Saenz - MIT License"
-theme:
-  name = "material"
-  palette:
-    - scheme = "default"
-      primary = "indigo"
-      accent = "amber"
-      toggle:
-        icon = "material/brightness-7"
-        name = "Switch to dark mode"
-    - scheme = "slate"
-      primary = "indigo"
-      accent = "amber"
-      toggle:
-        icon = "material/brightness-4"
-        name = "Switch to light mode"
-  features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.expand
-    - navigation.top
-    - search.highlight
-    - search.share
-    - content.code.copy
-    - content.code.annotate
-    - content.tabs.link
-  icon:
-    repo = "fontawesome/brands/github"
-markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums = true
-      line_spans = __span
-      pygments_lang_class = true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style = true
-  - pymdownx.tasklist:
-      custom_checkbox = true
-  - pymdownx.details
-  - admonition
-  - attr_list
-  - md_in_html
-  - toc:
-      permalink = true
-      toc_depth = 3
-plugins:
-  - search
-  - mkdocstrings:
-      handlers:
-        python:
-          paths: ["tsf"]
-          options:
-            show_source = true
-            show_signature = true
-            show_signature_annotations = true
-            merge_init_into_class = true
-            separate_signature = true
-  - git-revision-date-localized:
-      type = "timeago"
-      fallback_to_build_date = true
-  - minify:
-      minify_html = true
+# mkdocs configuration moved to mkdocs.yml (YAML format supports nested structures)
+# See mkdocs.yml for full documentation configuration
 
 [tool.commitizen]
 name = "cz_conventional_commits"

@@ -18,8 +18,8 @@ class OandaSettings(BaseSettings):
 
     model_config = SettingsConfigDict(env_prefix="OANDA_")
 
-    account_id: str = Field(..., description="Account ID (demo o live)")
-    api_key: str = Field(..., description="API Key (Personal Access Token)")
+    account_id: str = Field(default="", description="Account ID (demo o live)")
+    api_key: str = Field(default="", description="API Key (Personal Access Token)")
     environment: Literal["practice", "live"] = "practice"
     streaming_host: str = "stream-fxpractice.oanda.com"
     rest_host: str = "api-fxpractice.oanda.com"
