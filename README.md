@@ -302,4 +302,5 @@ Este framework se apoya en los hombros de gigantes:
 
 ---
 
-*Construido con honestidad intelectual, rigor científico y la convicción de que el trading puede abordarse como ciencia —no como apuesta— cuando se aplican las herramientas correctas.*
+*Construido con honestidad intelectual, rigor científico y la convicción de que el trading puede abordarse como ciencia —no como apuesta— cuando se aplican las herramientas correctas.* 
+ 
