@@ -24,7 +24,7 @@ jobs:
           python-version: '3.11'
           cache: 'pip'
       - name: Install docs dependencies
-        run: pip install mkdocs mkdocs-material mkdocstrings[python] mkdocs-git-revision-date-localized-plugin --quiet
+        run: pip install mkdocs mkdocs-material mkdocstrings[python] mkdocs-git-revision-date-localized-plugin mkdocs-minify-plugin --quiet
       - name: Build Docs
         run: mkdocs build --strict
       - uses: actions/upload-pages-artifact@v3
