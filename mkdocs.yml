@@ -92,44 +92,44 @@ extra:
 nav:
   - Inicio: index.md
   - Guía de Inicio Rápido: quickstart.md
-  - Fase 0: Fundación:
-      - Qué es Trading Realmente: 00-foundation/01-what-is-trading.md
-      - Método Científico Aplicado: 00-foundation/02-scientific-method.md
-      - Realidad del Riesgo: 00-foundation/03-risk-reality.md
-  - Fase 1: Datos:
-      - Estructura de Mercado: 01-data/01-market-structure.md
-      - Principio Point-in-Time: 01-data/02-pit-principle.md
-      - Calidad de Datos: 01-data/03-data-quality.md
-  - Fase 2: Investigación:
-      - Hipótesis Falsables: 02-research/01-hypothesis-driven.md
-      - Pre-registro Obligatorio: 02-research/02-pre-registration.md
-      - Diseño de Pipelines Verificables: 02-research/03-pipeline-design.md
-  - Fase 3: Validación:
-      - Trampas del Backtesting: 03-validation/01-backtest-traps.md
-      - CPCV, DSR, PBO, MinTRL: 03-validation/02-cpcv-dsr-pbo.md
-      - Gate factor-qc: 03-validation/03-factor-qc-gate.md
-  - Fase 4: Ejecución:
-      - Gestión de Órdenes: 04-execution/01-order-management.md
-      - Risk Management: 04-execution/02-risk-management.md
-      - Paper Trading: 04-execution/03-paper-trading.md
-  - Fase 5: Psicología:
-      - Sesgos Cognitivos: 05-psychology/01-cognitive-biases.md
-      - Tuition Memory: 05-psychology/02-tuition-memory.md
-      - Sistemas de Disciplina: 05-psychology/03-discipline-systems.md
-  - Fase 6: Gobernanza:
-      - Holdout Governance: 06-governance/01-holdout-governance.md
-      - CI/CD Integration: 06-governance/02-ci-cd.md
-  - Fase 7: Producción:
-      - VPS Setup: 07-production/01-vps-setup.md
-      - Observabilidad: 07-production/02-observability.md
-      - Runbook: 07-production/03-runbook.md
-  - Fase 8: Contribución:
-      - Registro Traders Honestos: 08-contribution/01-trader-registry.md
-      - Publicación de Hallazgos: 08-contribution/02-publishing.md
-  - Referencia CLI: cli-reference.md
-  - API Reference: api-reference.md
-  - Contribuir: contributing.md
-  - Licencia: license.md
+  - "Fase 0: Fundación":
+      - "Qué es Trading Realmente": 00-foundation/01-what-is-trading.md
+      - "Método Científico Aplicado": 00-foundation/02-scientific-method.md
+      - "Realidad del Riesgo": 00-foundation/03-risk-reality.md
+  - "Fase 1: Datos":
+      - "Estructura de Mercado": 01-data/01-market-structure.md
+      - "Principio Point-in-Time": 01-data/02-pit-principle.md
+      - "Calidad de Datos": 01-data/03-data-quality.md
+  - "Fase 2: Investigación":
+      - "Hipótesis Falsables": 02-research/01-hypothesis-driven.md
+      - "Pre-registro Obligatorio": 02-research/02-pre-registration.md
+      - "Diseño de Pipelines Verificables": 02-research/03-pipeline-design.md
+  - "Fase 3: Validación":
+      - "Trampas del Backtesting": 03-validation/01-backtest-traps.md
+      - "CPCV, DSR, PBO, MinTRL": 03-validation/02-cpcv-dsr-pbo.md
+      - "Gate factor-qc": 03-validation/03-factor-qc-gate.md
+  - "Fase 4: Ejecución":
+      - "Gestión de Órdenes": 04-execution/01-order-management.md
+      - "Risk Management": 04-execution/02-risk-management.md
+      - "Paper Trading": 04-execution/03-paper-trading.md
+  - "Fase 5: Psicología":
+      - "Sesgos Cognitivos": 05-psychology/01-cognitive-biases.md
+      - "Tuition Memory": 05-psychology/02-tuition-memory.md
+      - "Sistemas de Disciplina": 05-psychology/03-discipline-systems.md
+  - "Fase 6: Gobernanza":
+      - "Holdout Governance": 06-governance/01-holdout-governance.md
+      - "CI/CD Integration": 06-governance/02-ci-cd.md
+  - "Fase 7: Producción":
+      - "VPS Setup": 07-production/01-vps-setup.md
+      - "Observabilidad": 07-production/02-observability.md
+      - "Runbook": 07-production/03-runbook.md
+  - "Fase 8: Contribución":
+      - "Registro Traders Honestos": 08-contribution/01-trader-registry.md
+      - "Publicación de Hallazgos": 08-contribution/02-publishing.md
+  - "Referencia CLI": cli-reference.md
+  - "API Reference": api-reference.md
+  - "Contribuir": contributing.md
+  - "Licencia": license.md
 
 extra_css:
   - stylesheets/extra.css
