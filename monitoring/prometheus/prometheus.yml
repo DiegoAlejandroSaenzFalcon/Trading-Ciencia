@@ -1,0 +1,73 @@
+# Trading Science Framework - Prometheus Configuration
+#
+# Métricas clave para trading científico:
+# - Equity curve, drawdown, PnL
+# - Trade metrics: win rate, avg R, expectancy
+# - Risk metrics: daily loss, max drawdown, breaker status
+# - System health: latency, errors, API connectivity
+# - Research metrics: backtest status, gate results
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    project: 'trading-science-framework'
+    environment: '${TSF_ENV:-development}'
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: []  # Configurar si usas Alertmanager
+
+rule_files:
+  - "rules/*.yml"
+
+scrape_configs:
+  # ============================================================
+  # APP PRINCIPAL (TSF)
+  # ============================================================
+  - job_name: 'tsf-app'
+    static_configs:
+      - targets: ['app:9090']
+    metrics_path: '/metrics'
+    scrape_interval: 10s
+
+  # ============================================================
+  # POSTGRESQL (via postgres_exporter)
+  # ============================================================
+  - job_name: 'postgres'
+    static_configs:
+      - targets: ['postgres:9187']  # Requiere postgres_exporter sidecar
+    scrape_interval: 30s
+
+  # ============================================================
+  # REDIS (via redis_exporter)
+  # ============================================================
+  - job_name: 'redis'
+    static_configs:
+      - targets: ['redis:9121']  # Requiere redis_exporter sidecar
+    scrape_interval: 30s
+
+  # ============================================================
+  # DOCKER (via cAdvisor)
+  # ============================================================
+  - job_name: 'cadvisor'
+    static_configs:
+      - targets: ['cadvisor:8080']
+    scrape_interval: 30s
+
+  # ============================================================
+  # NODE EXPORTER (Host metrics)
+  # ============================================================
+  - job_name: 'node'
+    static_configs:
+      - targets: ['node-exporter:9100']
+    scrape_interval: 30s
+
+  # ============================================================
+  # GRAFANA (Self-monitoring)
+  # ============================================================
+  - job_name: 'grafana'
+    static_configs:
+      - targets: ['grafana:3000']
+    scrape_interval: 30s

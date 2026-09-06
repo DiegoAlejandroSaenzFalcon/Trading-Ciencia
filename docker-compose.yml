@@ -1,0 +1,276 @@
+# Trading Science Framework - Docker Compose
+#
+# Stack completo para desarrollo y producción:
+# - app: Framework principal
+# - postgres: Base de datos (producción)
+# - redis: Cache, rate limiting, colas
+# - prometheus: Métricas
+# - grafana: Dashboards
+# - loki: Log aggregation (opcional)
+# - promtail: Log shipper (opcional)
+#
+# Uso:
+#   Desarrollo:  docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
+#   Producción:  docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+
+version: '3.9'
+
+services:
+  # ============================================================
+  # APP PRINCIPAL
+  # ============================================================
+  app:
+    build:
+      context: .
+      file: deployment/docker/Dockerfile
+      target: runtime
+      args:
+        BUILD_DATE: ${BUILD_DATE:-$(date -u +'%Y-%m-%dT%H:%M:%SZ')}
+        VCS_REF: ${VCS_REF:-$(git rev-parse --short HEAD)}
+        VERSION: ${VERSION:-$(git describe --tags --always --dirty)}
+    container_name: tsf-app
+    hostname: tsf-app
+    env_file:
+      - .env
+    environment:
+      - TSF_ENV=production
+      - DATABASE_URL=postgresql+asyncpg://tsf:${POSTGRES_PASSWORD}@postgres:5432/tsf
+      - REDIS_URL=redis://redis:6379/0
+      - PROMETHEUS_MULTIPROC_DIR=/tmp/prometheus_multiproc
+    volumes:
+      - ./data:/app/data:rw
+      - ./research:/app/research:rw
+      - ./strategies:/app/strategies:ro
+      - ./lessons:/app/lessons:rw
+      - ./governance:/app/governance:rw
+      - ./logs:/app/logs:rw
+      - ./config:/app/config:ro
+      - prometheus_multiproc:/tmp/prometheus_multiproc
+    ports:
+      - "8000:8000"  # FastAPI (si web enabled)
+      - "9090:9090"  # Prometheus metrics
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "from tsf.config import settings; print('OK')"]
+      interval: 30s
+      timeout: 10s
+      start_period: 15s
+      retries: 3
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+
+  # ============================================================
+  # POSTGRESQL (Producción)
+  # ============================================================
+  postgres:
+    image: postgres:16-alpine
+    container_name: tsf-postgres
+    hostname: tsf-postgres
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_DB=tsf
+      - POSTGRES_USER=tsf
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_INITDB_ARGS=--encoding=UTF-8 --locale=C
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./deployment/scripts/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql:ro
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tsf -d tsf"]
+      interval: 10s
+      timeout: 5s
+      start_period: 10s
+      retries: 5
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+
+  # ============================================================
+  # REDIS (Cache, Rate Limiting, Colas)
+  # ============================================================
+  redis:
+    image: redis:7-alpine
+    container_name: tsf-redis
+    hostname: tsf-redis
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      start_period: 5s
+      retries: 3
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+
+  # ============================================================
+  # PROMETHEUS (Métricas)
+  # ============================================================
+  prometheus:
+    image: prom/prometheus:v2.52.0
+    container_name: tsf-prometheus
+    hostname: tsf-prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--storage.tsdb.retention.time=30d'
+      - '--web.enable-lifecycle'
+      - '--web.enable-admin-api'
+    volumes:
+      - ./monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./monitoring/prometheus/rules:/etc/prometheus/rules:ro
+      - prometheus_data:/prometheus
+    ports:
+      - "9090:9090"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:9090/-/healthy"]
+      interval: 30s
+      timeout: 10s
+      start_period: 10s
+      retries: 3
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+
+  # ============================================================
+  # GRAFANA (Dashboards)
+  # ============================================================
+  grafana:
+    image: grafana/grafana:10.4.0
+    container_name: tsf-grafana
+    hostname: tsf-grafana
+    env_file:
+      - .env
+    environment:
+      - GF_SECURITY_ADMIN_USER=${GRAFANA_ADMIN_USER:-admin}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD}
+      - GF_USERS_ALLOW_SIGN_UP=false
+      - GF_INSTALL_PLUGINS=grafana-piechart-panel
+    volumes:
+      - ./monitoring/grafana/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./monitoring/grafana/datasources:/etc/grafana/provisioning/datasources:ro
+      - grafana_data:/var/lib/grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      start_period: 20s
+      retries: 3
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+
+  # ============================================================
+  # LOKI (Log Aggregation - Opcional)
+  # ============================================================
+  loki:
+    image: grafana/loki:2.9.0
+    container_name: tsf-loki
+    hostname: tsf-loki
+    command: -config.file=/etc/loki/local-config.yaml
+    volumes:
+      - ./monitoring/loki:/etc/loki:ro
+      - loki_data:/loki
+    ports:
+      - "3100:3100"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:3100/ready"]
+      interval: 30s
+      timeout: 10s
+      start_period: 10s
+      retries: 3
+    restart: unless-stopped
+    profiles:
+      - monitoring-full
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+
+  # ============================================================
+  # PROMTAIL (Log Shipper - Opcional)
+  # ============================================================
+  promtail:
+    image: grafana/promtail:2.9.0
+    container_name: tsf-promtail
+    hostname: tsf-promtail
+    command: -config.file=/etc/promtail/config.yml
+    volumes:
+      - ./logs:/var/log/tsf:ro
+      - ./monitoring/promtail:/etc/promtail:ro
+    depends_on:
+      - loki
+    profiles:
+      - monitoring-full
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 128M
+
+# ============================================================
+# VOLUMES PERSISTENTES
+# ============================================================
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  prometheus_data:
+    driver: local
+  grafana_data:
+    driver: local
+  loki_data:
+    driver: local
+  prometheus_multiproc:
+    driver: local
+
+# ============================================================
+# NETWORKS
+# ============================================================
+networks:
+  default:
+    name: tsf-network
+    driver: bridge

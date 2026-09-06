@@ -1,0 +1,111 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables (SECRETS - NUNCA COMMITEAR)
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.crt
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Testing / Coverage
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+
+# Build / Distribution
+build/
+dist/
+*.egg-info/
+*.whl
+*.tar.gz
+
+# Data files (gitignored - datos sensibles, pesados, regenerables)
+data/raw/*
+data/pit/*
+data/audits/*
+data/manifests/*
+!data/raw/.gitkeep
+!data/pit/.gitkeep
+!data/audits/.gitkeep
+!data/manifests/.gitkeep
+
+# Research artifacts (gitignored - contienen resultados intermedios)
+research/hypotheses/*
+research/pipelines/*
+research/backtests/*
+research/evidence/*
+research/adjudications/*
+research/artifacts/*
+!research/hypotheses/.gitkeep
+!research/pipelines/.gitkeep
+!research/backtests/.gitkeep
+!research/evidence/.gitkeep
+!research/adjudications/.gitkeep
+!research/artifacts/.gitkeep
+
+# Lessons (gitignored - tuition memory personal)
+lessons/*.jsonl
+!lessons/.gitkeep
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Monitoring / Prometheus
+monitoring/data/
+monitoring/prometheus/data/
+monitoring/grafana/data/
+
+# Deployment secrets
+deployment/secrets/
+deployment/*.pem
+deployment/*.key
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# MkDocs
+site/
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# IDE specific
+*.pyc
+*.pyo
+*.pyd

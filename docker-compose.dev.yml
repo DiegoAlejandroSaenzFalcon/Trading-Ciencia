@@ -1,0 +1,113 @@
+# Docker Compose - Development Override
+#
+# Uso: docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
+#
+# Diferencias con producción:
+# - Hot reload de código (volumes bind mount)
+# - Target: development (con dev tools)
+# - Puertos expuestos para debugging
+# - SQLite en lugar de PostgreSQL
+# - Sin resource limits
+
+version: '3.9'
+
+services:
+  app:
+    build:
+      target: development
+    container_name: tsf-app-dev
+    env_file:
+      - .env
+    environment:
+      - TSF_ENV=development
+      - DATABASE_URL=sqlite+aiosqlite:///./data/tsf.db
+      - REDIS_URL=redis://redis:6379/0
+      - PYTHONPATH=/app
+    volumes:
+      - .:/app:rw
+      - ./data:/app/data:rw
+      - ./research:/app/research:rw
+      - ./strategies:/app/strategies:rw
+      - ./lessons:/app/lessons:rw
+      - ./governance:/app/governance:rw
+      - ./logs:/app/logs:rw
+      - ./config:/app/config:rw
+    ports:
+      - "8000:8000"  # FastAPI
+      - "9090:9090"  # Prometheus
+      - "5678:5678"  # Debugpy (VS Code)
+    command: ["sleep", "infinity"]  # Keep running for exec
+    depends_on:
+      - redis
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 4G
+
+  postgres:
+    # No usar postgres en dev - usar SQLite
+    profile: ["postgres-dev"]
+    image: postgres:16-alpine
+    container_name: tsf-postgres-dev
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_DB=tsf
+      - POSTGRES_USER=tsf
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_dev_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+
+  redis:
+    container_name: tsf-redis-dev
+    ports:
+      - "6379:6379"
+
+  prometheus:
+    container_name: tsf-prometheus-dev
+    ports:
+      - "9090:9090"
+
+  grafana:
+    container_name: tsf-grafana-dev
+    ports:
+      - "3000:3000"
+
+  # Herramientas de desarrollo
+  jupyter:
+    image: jupyter/scipy-notebook:latest
+    container_name: tsf-jupyter
+    hostname: tsf-jupyter
+    env_file:
+      - .env
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    volumes:
+      - .:/home/jovyan/work:rw
+      - ./data:/home/jovyan/work/data:rw
+      - ./research:/home/jovyan/work/research:rw
+      - ./examples:/home/jovyan/work/examples:ro
+    ports:
+      - "8888:8888"
+    command: start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''
+    depends_on:
+      - app
+    profiles:
+      - jupyter
+
+  # Mailhog para testing de emails (si se implementa)
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: tsf-mailhog
+    ports:
+      - "1025:1025"  # SMTP
+      - "8025:8025"  # Web UI
+    profiles:
+      - mailhog
+
+volumes:
+  postgres_dev_data:
+    driver: local
