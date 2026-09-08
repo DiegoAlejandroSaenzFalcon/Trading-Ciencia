@@ -214,7 +214,7 @@ jobs:
           cache: 'pip'
 
       - name: Install docs dependencies
-        run: pip install mkdocs mkdocs-material mkdocstrings[python] --quiet
+        run: pip install mkdocs mkdocs-material mkdocstrings[python] mkdocs-git-revision-date-localized-plugin --quiet
 
       - name: Build Docs
         run: mkdocs build --strict
