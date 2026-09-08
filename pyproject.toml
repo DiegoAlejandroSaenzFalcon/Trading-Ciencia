@@ -62,7 +62,7 @@ dependencies = [
     "backtrader>=1.9.78",
 
     # Technical indicators
-    "ta-lib>=0.4.28",
+    # "ta-lib>=0.4.28",  # opcional (requiere biblioteca C TA-Lib)
     "pandas-ta==0.4.71b0",
 
     # Persistence
