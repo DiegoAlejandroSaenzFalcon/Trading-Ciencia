@@ -1,4 +1,4 @@
-﻿# Trading Science Framework
+# 🧪 Trading Science Framework
 
 > **Marco de Investigación Científica Aplicada al Trading — Libre, Honesto, Verificable**
 
@@ -9,24 +9,36 @@
 
 ---
 
-## ¿Qué es esto?
+## 🧭 De un vistazo
 
-**No es un bot de trading.**  
-**No es un curso.**  
-**No vende señales, no promete riquezas, no oculta riesgos.**
-
-Es un **marco de investigación** para que **cualquier persona**, desde cero, pueda:
-
-1. **Aprender trading como ciencia** — metodología, validación, evidencia
-2. **Probar estrategias con rigor** — backtesting honesto, sin look-ahead, sin data snooping
-3. **Documentar su proceso** — pre-registro, adjudicación, hit-rate vs baseline
-4. **Gestionar su psicología** — tuition memory, checklists, premortems automatizados
-5. **Operar en demo → real** — con gates de calidad que protegen su capital
-6. **Contribuir al conocimiento colectivo** — abierto, reproducible, auditable
+| | |
+|---|---|
+| 🎯 **Qué es** | Un marco de investigación para aprender trading como **ciencia** |
+| 🚫 **Qué no es** | No es un bot de trading, ni un curso, ni vende señales |
+| 👤 **Para quién** | Cualquier persona, desde cero, con rigor y validación |
+| 🧰 **Toolchain** | 7 herramientas de integridad científica (MIT, local-first) |
+| 🐍 **Stack** | Python 3.11+ · Git · Docker (opcional) · OANDA demo |
+| 📜 **Licencia** | MIT — atribución a Diego Alejandro Saenz Falcon |
 
 ---
 
-## Filosofía
+## ❓ ¿Qué es esto?
+
+> ⚠️ **No es un bot de trading.** **No es un curso.** **No vende señales, no promete
+> riquezas, no oculta riesgos.**
+
+Es un **marco de investigación** para que **cualquier persona**, desde cero, pueda:
+
+1. 🎓 **Aprender trading como ciencia** — metodología, validación, evidencia
+2. 🧪 **Probar estrategias con rigor** — backtesting honesto, sin look-ahead, sin data snooping
+3. 📝 **Documentar su proceso** — pre-registro, adjudicación, hit-rate vs baseline
+4. 🧠 **Gestionar su psicología** — tuition memory, checklists, premortems automatizados
+5. 🛡️ **Operar en demo → real** — con gates de calidad que protegen su capital
+6. 🤝 **Contribuir al conocimiento colectivo** — abierto, reproducible, auditable
+
+---
+
+## 🧬 Filosofía
 
 | Principio | Cómo se implementa |
 |-----------|-------------------|
@@ -40,7 +52,7 @@ Es un **marco de investigación** para que **cualquier persona**, desde cero, pu
 
 ---
 
-## Inicio Rápido
+## 🚀 Inicio Rápido
 
 ### Prerrequisitos
 - Python 3.11+
@@ -88,7 +100,7 @@ tsf --help
 
 ---
 
-## Estructura del Proyecto
+## 🗂️ Estructura del Proyecto
 
 ```
 Trading-Ciencia/
@@ -125,9 +137,10 @@ Trading-Ciencia/
 
 ---
 
-## Guía Secuencial de Aprendizaje (Desde Cero)
+## 🎯 Guía Secuencial de Aprendizaje (Desde Cero)
 
-> **Importante:** Esta guía está diseñada para seguirse **en orden**. Cada fase construye sobre la anterior. No salte fases.
+> 💡 **Importante:** Esta guía está diseñada para seguirse **en orden**. Cada fase construye
+> sobre la anterior. No salte fases.
 
 ### Fase 0: Fundación — *Entender el Juego* (Semana 1)
 - [ ] **0.1** Leer `docs/00-foundation/01-what-is-trading.md` — Qué es trading realmente
@@ -184,7 +197,7 @@ Trading-Ciencia/
 
 ---
 
-## Toolchain Científica Integrada (Holdout Labs)
+## 🧰 Toolchain Científica Integrada (Holdout Labs)
 
 | Herramienta | Propósito | Comando Principal |
 |-------------|-----------|-------------------|
@@ -200,7 +213,7 @@ Todas son **MIT license**, **zero/minimal dependencies**, **local-first**, **Win
 
 ---
 
-## Estrategias de Referencia (No Impuestas)
+## 📈 Estrategias de Referencia (No Impuestas)
 
 El framework **no impone ninguna estrategia**. Incluye implementaciones de referencia para estudio:
 
@@ -209,11 +222,13 @@ El framework **no impone ninguna estrategia**. Incluye implementaciones de refer
 - **Trend Following** — Ejemplo educativo multi-activo
 - **Tu estrategia aquí** — El framework te guía para construir y validar la tuya
 
-> **Nota:** La estrategia KalmanATR se conserva en `strategies/references/kalman_atr/` por valor histórico (dio indicios positivos en backtest), **no porque sea "la buena"**. El proceso científico determinará su validez real.
+> 💡 **Nota:** La estrategia KalmanATR se conserva en `strategies/references/kalman_atr/` por
+> valor histórico (dio indicios positivos en backtest), **no porque sea "la buena"**. El
+> proceso científico determinará su validez real.
 
 ---
 
-## Documentación
+## 📚 Documentación
 
 - **Web (GitHub Pages):** https://diegoalejandrosaenzfalcon.github.io/Trading-Ciencia/
 - **Local:** `mkdocs serve` → http://localhost:8000
@@ -221,9 +236,9 @@ El framework **no impone ninguna estrategia**. Incluye implementaciones de refer
 
 ---
 
-## Licencia
+## 📜 Licencia
 
-**MIT License** — Libre uso, modificación, distribución, uso comercial.  
+**MIT License** — Libre uso, modificación, distribución, uso comercial.
 **Requisito único:** Atribución a **Diego Alejandro Saenz Falcon** como autor original.
 
 ```text
@@ -250,15 +265,15 @@ SOFTWARE.
 
 ---
 
-## Autor
+## 👤 Autor
 
-**Diego Alejandro Saenz Falcon** — Investigador independiente, trader retail, desarrollador.  
-GitHub: [@DiegoAlejandroSaenzFalcon](https://github.com/DiegoAlejandroSaenzFalcon)  
+**Diego Alejandro Saenz Falcon** — Investigador independiente, trader retail, desarrollador.
+GitHub: [@DiegoAlejandroSaenzFalcon](https://github.com/DiegoAlejandroSaenzFalcon)
 Contacto: Issues del repositorio (público, transparente)
 
 ---
 
-## Agradecimientos
+## 🙏 Agradecimientos
 
 Este framework se apoya en los hombros de gigantes:
 
@@ -271,7 +286,7 @@ Este framework se apoya en los hombros de gigantes:
 
 ---
 
-## Contribuir
+## 🤝 Contribuir
 
 1. Fork del repo
 2. Crear rama: `git checkout -b feature/mi-mejora`
@@ -282,7 +297,7 @@ Este framework se apoya en los hombros de gigantes:
 
 ---
 
-## Seguridad
+## 🔒 Seguridad
 
 - **NUNCA** commitear API keys, secrets, tokens
 - Usar `.env` (gitignored) + `.env.example` (template)
@@ -291,16 +306,15 @@ Este framework se apoya en los hombros de gigantes:
 
 ---
 
-## Disclaimer
+## ⚠️ Disclaimer
 
-> **Este software es para fines educativos e investigativos.**  
-> **No constituye asesoramiento financiero.**  
-> **El trading conlleva riesgo de pérdida total del capital.**  
-> **Nunca arriesgue dinero que no pueda permitirse perder.**  
-> **Valide SIEMPRE en demo extensiva antes de capital real.**  
+> **Este software es para fines educativos e investigativos.**
+> **No constituye asesoramiento financiero.**
+> **El trading conlleva riesgo de pérdida total del capital.**
+> **Nunca arriesgue dinero que no pueda permitirse perder.**
+> **Valide SIEMPRE en demo extensiva antes de capital real.**
 > **Los resultados pasados no garantizan resultados futuros.**
 
 ---
 
-*Construido con honestidad intelectual, rigor científico y la convicción de que el trading puede abordarse como ciencia —no como apuesta— cuando se aplican las herramientas correctas.* 
- 
+*Construido con honestidad intelectual, rigor científico y la convicción de que el trading puede abordarse como ciencia —no como apuesta— cuando se aplican las herramientas correctas.*
