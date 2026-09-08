@@ -1,10 +1,10 @@
-[project]
+﻿[project]
 name = "Trading-Ciencia"
 version = "0.1.0"
 description = "Marco de Investigación Científica Aplicada al Trading — Libre, Honesto, Verificable"
 readme = "README.md"
 license = {text = "MIT"}
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 authors = [
     {name = "Diego Alejandro Saenz Falcon", email = "diegoalejandrosaenzfalcon@users.noreply.github.com"}
 ]
@@ -63,7 +63,7 @@ dependencies = [
 
     # Technical indicators
     "ta-lib>=0.4.28",
-    "pandas-ta>=0.3.14",
+    "pandas-ta==0.4.71b0",
 
     # Persistence
     "sqlalchemy>=2.0.0",
