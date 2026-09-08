@@ -1,0 +1,21 @@
+{
+  "schema_version": "tsf.hypothesis.v1",
+  "hypothesis_id": "{{HYPOTHESIS_ID}}",
+  "created_at": "{{CREATED_AT}}",
+  "description": "{{DESCRIPTION}}",
+  "expected_direction": "{{DIRECTION}}",
+  "source_type": "pipeline",
+  "falsification_contract": {
+    "kill_criteria": [
+      {"metric": "dsr", "threshold": 0.5, "operator": "<"},
+      {"metric": "pbo", "threshold": 0.05, "operator": ">"},
+      {"metric": "mintrl", "threshold": "{{SAMPLE_SIZE}}", "operator": ">"}
+    ],
+    "description": "Evidencia que refutaría la hipótesis"
+  },
+  "status": "draft",
+  "metadata": {
+    "author": "Diego Saenz",
+    "framework_version": "0.1.0"
+  }
+}

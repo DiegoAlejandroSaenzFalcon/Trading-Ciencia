@@ -1,0 +1,5 @@
+[
+  {"code": "XAUUSD", "name": "Gold vs USD", "active": true},
+  {"code": "BTCUSD", "name": "Bitcoin vs USD", "active": false},
+  {"code": "EURUSD", "name": "Euro vs USD", "active": false}
+]

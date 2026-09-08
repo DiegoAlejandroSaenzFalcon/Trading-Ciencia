@@ -1,0 +1,31 @@
+{
+  "name": "{{PIPELINE_NAME}}",
+  "operations": [
+    {
+      "op_id": "read_bars",
+      "kind": "read",
+      "outputs": ["raw_bars"],
+      "release": "{{RELEASE_TIME}}"
+    },
+    {
+      "op_id": "pit_adjust",
+      "kind": "pit_read",
+      "inputs": ["raw_bars"],
+      "outputs": ["hfq_bars"],
+      "read_cutoff": "{{PIT_CUTOFF}}"
+    },
+    {
+      "op_id": "calculate_indicators",
+      "kind": "transform",
+      "inputs": ["hfq_bars"],
+      "outputs": ["indicators"]
+    },
+    {
+      "op_id": "generate_signal",
+      "kind": "decision",
+      "inputs": ["indicators"],
+      "outputs": ["signal"],
+      "decision_time": "{{DECISION_TIME}}"
+    }
+  ]
+}

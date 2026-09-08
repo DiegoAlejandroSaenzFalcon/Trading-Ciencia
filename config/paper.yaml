@@ -1,0 +1,16 @@
+# Paper Trading Configuration
+mode: paper
+strategy: strategies/references/kalman_atr/strategy.py
+symbol: XAUUSD
+timeframe: M5
+duration_days: 30
+dry_run: true
+risk:
+  sizing_mode: 2
+  risk_pct_equity: 0.5
+  max_lots: 1.0
+  sl_mult_atr: 1.5
+  tp_r_multiple: 2.0
+  cooldown_minutes: 10
+  max_trades_per_day: 5
+  daily_loss_limit_pct: 2.0

@@ -1,0 +1,28 @@
+{
+  "schema_version": "holdout.artifact.v0.2",
+  "artifact_id": "{{ARTIFACT_ID}}",
+  "artifact_type": "research_conclusion",
+  "title": "{{TITLE}}",
+  "created_at": "{{CREATED_AT}}",
+  "updated_at": "{{UPDATED_AT}}",
+  "status": "draft",
+  "decision": "pending",
+  "hypothesis_ref": "{{HYPOTHESIS_ID}}",
+  "pipeline_ref": "{{PIPELINE_ID}}",
+  "backtest_ref": "{{BACKTEST_ID}}",
+  "evidence_refs": [],
+  "attachments": {},
+  "declarations": {
+    "contains_returns": false,
+    "contains_recommendations": false
+  },
+  "limitations": "",
+  "sources": [],
+  "gate_evidence": {},
+  "review": {
+    "reviewer": "",
+    "reviewed_at": "",
+    "approved": false,
+    "notes": ""
+  }
+}

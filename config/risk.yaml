@@ -1,0 +1,21 @@
+# Risk Management Parameters
+sizing:
+  mode: 2  # 0=fixed, 1=usd_risk, 2=pct_equity
+  fixed_lots: 0.05
+  risk_usd: 20.0
+  risk_pct_equity: 0.5
+  max_lots: 1.0
+
+stops:
+  sl_mult_atr: 1.5
+  tp_r_multiple: 2.0
+
+limits:
+  cooldown_minutes: 10
+  max_trades_per_day: 5
+  daily_loss_limit_pct: 2.0
+
+session:
+  enabled: true
+  start_hour: 13
+  end_hour: 20

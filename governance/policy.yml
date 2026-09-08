@@ -1,0 +1,40 @@
+# Holdout Governance Policy
+version: "0.2"
+artifact_type: "research_conclusion"
+
+gates:
+  data_integrity:
+    required: true
+    tools: ["imm", "padj"]
+    max_age_hours: 24
+
+  timing:
+    required: true
+    tools: ["lf"]
+    max_age_hours: 24
+
+  statistical_quality:
+    required: true
+    tools: ["qc"]
+    max_age_hours: 168  # 1 week
+
+  falsification:
+    required: true
+    tools: ["fl"]
+    max_age_hours: 168
+
+conditional_attachments:
+  - when:
+      declarations.contains_returns: true
+    require:
+      - limitations
+      - sources
+
+review:
+  required: true
+  min_reviewers: 1
+  roles: ["research-owner"]
+
+release:
+  auto_on_pass: false
+  require_human_approval: true

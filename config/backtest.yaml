@@ -1,0 +1,16 @@
+# Backtesting / Validation Configuration
+cpcv:
+  n_splits: 12
+  n_test_groups: 6
+  periods_per_year: 252
+
+metrics:
+  min_trials: 5
+  benchmark_sharpe: 0.0
+  alpha: 0.05
+
+gate:
+  dsr_threshold: 0.5
+  pbo_threshold: 0.05
+  haircut_method: "holm"
+  mintrl_multiplier: 1.0
