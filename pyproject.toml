@@ -1,4 +1,4 @@
-﻿[project]
+[project]
 name = "Trading-Ciencia"
 version = "0.1.0"
 description = "Marco de Investigación Científica Aplicada al Trading — Libre, Honesto, Verificable"
@@ -145,15 +145,18 @@ requires = ["setuptools>=69.0", "wheel>=0.42.0"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-where = ["."]
+where = ["tsf"]
 include = ["tsf*"]
+
+[tool.setuptools.package-dir]
+trading_otc = "Trading-OTC/trading_otc"
 
 [tool.ruff]
 line-length = 100
 target-version = "py311"
 select = ["E", "F", "I", "N", "W", "UP", "B", "C4", "ARG", "PTH", "PL", "TRY", "SIM", "TID", "RET"]
 ignore = ["S101", "ARG001", "ARG002"]
-per-file-ignores = { "tests/*" = ["S101", "ARG001", "ARG002"], "examples/*" = ["S101", "T201"] }
+per-file-ignores = { "tests/*" = ["S101", "ARG001", "ARG002"], "examples/*" = ["S101", "T201"], "Trading-OTC/**" = ["N999", "TID252", "UP042", "UP035", "UP045", "UP006", "F401", "E501", "PLR2004", "W292", "TRY003", "TRY401", "SIM105"] }
 
 [tool.ruff.format]
 quote-style = "double"
@@ -176,7 +179,7 @@ warn_no_return = true
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
-testpaths = ["tests"]
+testpaths = ["tests", "Trading-OTC/tests"]
 python_files = ["test_*.py"]
 python_classes = ["Test*"]
 python_functions = ["test_*"]
@@ -189,8 +192,8 @@ markers = [
 ]
 
 [tool.coverage.run]
-source = ["tsf"]
-omit = ["tests/*", "examples/*", "*/migrations/*"]
+source = ["tsf", "trading_otc"]
+omit = ["tests/*", "examples/*", "*/migrations/*", "Trading-OTC/tests/*"]
 
 [tool.coverage.report]
 exclude_lines = [
