@@ -1,6 +1,6 @@
-﻿# Fase 0.3: Realidad del Riesgo â€” Drawdowns, Ruina, MatemÃ¡ticas
+# Fase 0.3: Realidad del Riesgo â€” Drawdowns, Ruina, MatemÃ¡ticas
 
-> **DuraciÃ³n: 2-3 horas**  
+> **Duración: 2-3 horas**  
 > **Objetivo: Internalizar las matemÃ¡ticas brutales que determinan si sobrevives**
 
 ---
@@ -232,4 +232,3 @@ Imagina esta secuencia:
 ---
 
 [Siguiente: Fase 1 â€” Estructura de Mercado â†’](../ROADMAP.md)
-
