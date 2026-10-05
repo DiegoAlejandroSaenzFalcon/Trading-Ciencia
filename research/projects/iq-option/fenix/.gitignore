@@ -1,0 +1,22 @@
+# Local/secrets and quarantined artifacts
+00-audit/quarantine/
+**/*.REVIEW-EXCLUDED
+**/config.txt
+**/accounts.json
+**/*secret*
+**/*.key
+**/*.bin
+
+# Python generated/runtime artifacts
+**/.venv/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+
+# Logs / local runtime state
+**/*.log
+
+# Extracted executables / packaged runtime
+**/*.exe
+**/*.dll

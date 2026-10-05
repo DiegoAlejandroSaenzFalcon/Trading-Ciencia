@@ -1,0 +1,33 @@
+# Fenix — configuración de ejemplo
+# NO coloque credenciales reales en este repositorio.
+
+[LOGIN_DIEGO]
+email = TU_EMAIL
+password = TU_PASSWORD
+
+[LOGIN_Diego]
+email = TU_EMAIL
+password = TU_PASSWORD
+
+[LOGIN_Mireya]
+email = TU_EMAIL
+password = TU_PASSWORD
+
+[FILTROS]
+evitar_paridad = NZDUSD, BTCUSD, XRPUSD, ETHUSD
+min_payout = 60
+
+[GESTION]
+martingale_multiplier = 2.2
+masaniello_trades = 5
+masaniello_wins = 3
+soros_levels = 0
+martingale_levels = 0
+
+[SISTEMA]
+payout_update_interval = 30
+
+[TELEGRAM]
+token = TU_TELEGRAM_BOT_TOKEN
+chat_id = TU_CHAT_ID
+group_id = TU_GROUP_ID
