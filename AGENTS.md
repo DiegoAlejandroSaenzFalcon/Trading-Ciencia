@@ -4,7 +4,7 @@ Eres un agente de IA **autorizado** por Diego Alejandro Saenz Falcon para colabo
 en el repositorio **Trading-Ciencia** (marco de investigación científica aplicada al trading).
 
 > 📖 **Antes de actuar**, lee las directivas maestras de la autoridad central:
-> `Directivas-de-Seguridad-IA/MANUAL-OPERATIVO-IA.md` y su `SECURITY.md`.
+> `Directivas-de-Seguridad/README.md` y su `SECURITY.md`.
 
 ## Reglas clave
 1. 🗂️ **Organización**: crea archivos **solo** dentro de
