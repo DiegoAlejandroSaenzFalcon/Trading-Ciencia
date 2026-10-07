@@ -7,7 +7,7 @@ name: CI/CD - Scientific Trading Framework
 
 on:
   push:
-    branches: [main, develop]
+    branches: [main]
   pull_request:
     branches: [main, develop]
   workflow_dispatch:
