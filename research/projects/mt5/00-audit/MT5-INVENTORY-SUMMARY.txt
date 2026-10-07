@@ -1,0 +1,10 @@
+﻿MT5 forensic inventory generated 2026-10-05T01:34:55
+Total files (.mq5/.mqh/.ex5): 186
+MQ5: 93
+MQH: 3
+EX5: 90
+User/unknown sources: 104
+Third-party/reference files: 82
+MQ5 without EX5: 5
+EX5 without MQ5: 2
+Broker evidence counts: Pepperstone=14; Exness=0; IQOption=0; Unproven=79

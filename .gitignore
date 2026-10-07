@@ -109,3 +109,26 @@ temp/
 *.pyc
 *.pyo
 *.pyd
+# Recovered trading project archives and compiled artifacts
+# Preserve locally and reference by SHA-256 manifests; do not inflate public Git history.
+research/projects/**/02-archives/**/*.zip
+research/projects/**/02-archives/**/*.exe
+research/projects/**/*.ex5
+research/projects/**/*.pkl
+research/projects/**/04-history/source/fallido 2/AUDITORIA_BIONIC_FULL.txt
+research/projects/**/01-source/current/*.csv
+research/projects/**/03-data/**
+research/projects/**/04-history/**/config.txt
+research/projects/**/04-history/**/*.log
+research/projects/**/*.zip
+research/projects/**/*.ex5
+research/projects/**/*.pkl
+research/projects/**/01-source/current/**/*.csv
+research/projects/**/04-history/**/*.csv
+research/projects/**/04-history/**/login.txt
+research/projects/**/04-history/**/brain_memory.json
+research/projects/**/04-history/**/user_stats.json
+research/projects/**/bionic
+research/projects/**/bot bionic 3.exe_extracted
+research/projects/**/04-history/source/Bionic/
+research/projects/**/04-history/source/fallido/

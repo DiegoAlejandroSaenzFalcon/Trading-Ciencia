@@ -1,0 +1,12 @@
+cosas que agrega la IA:
+
+Resumen de Tranquilidad
+Con las pausas que ya tenemos:
+
+0.2s al reconocer el par.
+1.0s si no cumple la estrategia.
+1.0s (nuevo) si hay error de datos.
+2.0s si falla una orden.
+Tu bot está operando a una velocidad "humana" (aprox. 1 petición cada 1.5 segundos). Esto es totalmente seguro y no levantará sospechas ni bloqueos en el broker.
+
+G

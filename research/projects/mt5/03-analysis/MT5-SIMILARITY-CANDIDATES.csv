@@ -1,0 +1,97 @@
+token_jaccard,file_a,file_b,family_a,family_b
+1.0000,papa.mq5,XAUUSD NeurAlgo M15.mq5,other,neur_algo
+1.0000,mama.mq5,XAUUSD NeurAlgo M15.mq5,other,neur_algo
+1.0000,Engulfingbull ny backtested.mq5,EngulfingBull_NY_EA.mq5,engulfing,engulfing
+0.9934,BTCUSD NeurAlgo M1.mq5,XAUUSD NeurAlgo M1.mq5,neur_algo,neur_algo
+0.9892,APEXQUANT - V7.7-PRO.mq5,ApexQuant MQL5.mq5,apexquant,apexquant
+0.9744,ApexQuant Institucional BTCUSD.mq5,ApexQuant Institucional.mq5,apexquant,apexquant
+0.9630,APEXQUANT_V79_ASYMMETRIC.mq5,NeurAlgo V80.mq5,apexquant,neur_algo
+0.9516,ApexQuant Diego Saenz.mq5,ApexQuant Institucional XAUUSD.mq5,apexquant,apexquant
+0.9237,ApexQuant Diego Saenz.mq5,Oro.mq5,apexquant,oro-gold
+0.9109,APEXQUANT_V79_ASYMMETRIC.mq5,XAUUSD NeurAlgo M1.mq5,apexquant,neur_algo
+0.9052,APEXQUANT_V79_ASYMMETRIC.mq5,BTCUSD NeurAlgo M1.mq5,apexquant,neur_algo
+0.8942,ApexQuant Institucional XAUUSD.mq5,Oro.mq5,apexquant,oro-gold
+0.8931,ApexQuant MQL5.mq5,ApexQuant_V7.8-PRO.mq5,apexquant,apexquant
+0.8912,APEXQUANT - V7.7-PRO.mq5,ApexQuant_V7.8-PRO.mq5,apexquant,apexquant
+0.8911,NeurAlgo V80.mq5,XAUUSD NeurAlgo M1.mq5,neur_algo,neur_algo
+0.8856,BTCUSD NeurAlgo M1.mq5,NeurAlgo V80.mq5,neur_algo,neur_algo
+0.8555,Trendsniper btc.mq5,Trendsniper xauusd.mq5,trendsniper,trendsniper
+0.8477,ApexQuant Institucional.mq5,ApexQuant MQL5.mq5,apexquant,apexquant
+0.8399,ApexQuant Institucional.mq5,prueba.mq5,apexquant,other
+0.8389,APEXQUANT - V7.7-PRO.mq5,ApexQuant Institucional.mq5,apexquant,apexquant
+0.8360,ApexQuant Institucional BTCUSD.mq5,ApexQuant MQL5.mq5,apexquant,apexquant
+0.8329,ApexQuant Institucional.mq5,Gemini.mq5,apexquant,other
+0.8302,ApexQuant Institucional BTCUSD.mq5,prueba.mq5,apexquant,other
+0.8291,APEXQUANT - V7.7-PRO.mq5,ApexQuant Institucional BTCUSD.mq5,apexquant,apexquant
+0.8250,ApexQuant Institucional BTCUSD.mq5,Gemini.mq5,apexquant,other
+0.8082,ApexQuant BTCUSD.mq5,ApexQuant XAUUSD.mq5,apexquant,apexquant
+0.8024,APEXQUANT_V78_DYNAMIC.mq5,APEXQUANT_V79_ASYMMETRIC.mq5,apexquant,apexquant
+0.7944,APEXQUANT_V78_DYNAMIC.mq5,NeurAlgo V80.mq5,apexquant,neur_algo
+0.7640,ApexQuant Institucional.mq5,ApexQuant_V7.8-PRO.mq5,apexquant,apexquant
+0.7621,ApexQuant Institucional.mq5,Gemini BTCUSD.mq5,apexquant,other
+0.7588,ApexQuant Institucional BTCUSD.mq5,ApexQuant_V7.8-PRO.mq5,apexquant,apexquant
+0.7586,ApexQuant MQL5.mq5,APEXQUANT_V78_DYNAMIC.mq5,apexquant,apexquant
+0.7537,ApexQuant Institucional BTCUSD.mq5,Gemini BTCUSD.mq5,apexquant,other
+0.7517,ApexQuant MQL5.mq5,prueba.mq5,apexquant,other
+0.7517,APEXQUANT - V7.7-PRO.mq5,APEXQUANT_V78_DYNAMIC.mq5,apexquant,apexquant
+0.7506,APEXQUANT_V78_DYNAMIC.mq5,XAUUSD NeurAlgo M1.mq5,apexquant,neur_algo
+0.7477,APEXQUANT - V7.7-PRO.mq5,prueba.mq5,apexquant,other
+0.7459,APEXQUANT_V78_DYNAMIC.mq5,BTCUSD NeurAlgo M1.mq5,apexquant,neur_algo
+0.7455,ApexQuant MQL5.mq5,Gemini.mq5,apexquant,other
+0.7400,APEXQUANT - V7.7-PRO.mq5,Gemini.mq5,apexquant,other
+0.7382,BTCUSD NeurAlgo M1.mq5,test.mq5,neur_algo,other
+0.7355,test.mq5,XAUUSD NeurAlgo M1.mq5,other,neur_algo
+0.6984,ApexQuant_V7.8-PRO.mq5,APEXQUANT_V78_DYNAMIC.mq5,apexquant,apexquant
+0.6892,APEXQUANT - V7.7-PRO.mq5,Gemini BTCUSD.mq5,apexquant,other
+0.6885,ApexQuant MQL5.mq5,Gemini BTCUSD.mq5,apexquant,other
+0.6884,ApexQuant_V7.8-PRO.mq5,prueba.mq5,apexquant,other
+0.6879,APEXQUANT_V79_ASYMMETRIC.mq5,test.mq5,apexquant,other
+0.6829,ApexQuant_V7.8-PRO.mq5,Gemini.mq5,apexquant,other
+0.6753,NeurAlgo V80.mq5,test.mq5,neur_algo,other
+0.6672,ApexQuant Institucional.mq5,APEXQUANT_V78_DYNAMIC.mq5,apexquant,apexquant
+0.6664,ApexQuant MQL5.mq5,APEXQUANT_V79_ASYMMETRIC.mq5,apexquant,apexquant
+0.6607,APEXQUANT - V7.7-PRO.mq5,APEXQUANT_V79_ASYMMETRIC.mq5,apexquant,apexquant
+0.6600,ApexQuant Institucional BTCUSD.mq5,APEXQUANT_V78_DYNAMIC.mq5,apexquant,apexquant
+0.6578,ApexQuant MQL5.mq5,XAUUSD NeurAlgo M1.mq5,apexquant,neur_algo
+0.6577,ApexQuant MQL5.mq5,NeurAlgo V80.mq5,apexquant,neur_algo
+0.6536,ApexQuant MQL5.mq5,BTCUSD NeurAlgo M1.mq5,apexquant,neur_algo
+0.6522,APEXQUANT - V7.7-PRO.mq5,NeurAlgo V80.mq5,apexquant,neur_algo
+0.6521,APEXQUANT - V7.7-PRO.mq5,XAUUSD NeurAlgo M1.mq5,apexquant,neur_algo
+0.6479,APEXQUANT - V7.7-PRO.mq5,BTCUSD NeurAlgo M1.mq5,apexquant,neur_algo
+0.6418,ApexQuant XAUUSD.mq5,DiegoSaenz 24h.mq5,apexquant,other
+0.6374,ApexQuant_V7.8-PRO.mq5,Gemini BTCUSD.mq5,apexquant,other
+0.6373,ApexQuant Institucional.mq5,AQDSV7.6 Gemini 3.5 Pro.mq5,apexquant,apexquant
+0.6296,APEXQUANT_V78_DYNAMIC.mq5,test.mq5,apexquant,other
+0.6289,Engulfingbull ny backtested.mq5,EngulfingBull_NY_EA_v3.mq5,engulfing,engulfing
+0.6289,EngulfingBull_NY_EA.mq5,EngulfingBull_NY_EA_v3.mq5,engulfing,engulfing
+0.6274,ApexQuant Institucional BTCUSD.mq5,AQDSV7.6 Gemini 3.5 Pro.mq5,apexquant,apexquant
+0.6199,ApexQuant_V7.8-PRO.mq5,APEXQUANT_V79_ASYMMETRIC.mq5,apexquant,apexquant
+0.6172,ApexQuant Institucional.mq5,DiegoSaenz 24h.mq5,apexquant,other
+0.6135,ApexQuant_V7.8-PRO.mq5,NeurAlgo V80.mq5,apexquant,neur_algo
+0.6125,ApexQuant Institucional BTCUSD.mq5,DiegoSaenz 24h.mq5,apexquant,other
+0.6119,ApexQuant_V7.8-PRO.mq5,XAUUSD NeurAlgo M1.mq5,apexquant,neur_algo
+0.6088,ApexQuant_Phase1_Trim.mq5,Mql5 Oro.mq5,apexquant,oro-gold
+0.6081,ApexQuant_V7.8-PRO.mq5,BTCUSD NeurAlgo M1.mq5,apexquant,neur_algo
+0.6062,APEXQUANT_V78_DYNAMIC.mq5,prueba.mq5,apexquant,other
+0.6059,APEXQUANT_V78_DYNAMIC.mq5,Gemini.mq5,apexquant,other
+0.6027,ApexQuant XAUUSD.mq5,DiegoSaenz.mq5,apexquant,other
+0.5886,ApexQuant BTCUSD.mq5,DiegoSaenz 24h.mq5,apexquant,other
+0.5878,ApexQuant Institucional.mq5,APEXQUANT_V79_ASYMMETRIC.mq5,apexquant,apexquant
+0.5841,ApexQuant.mq5,Fenix V2.mq5,apexquant,fenix-mt5
+0.5819,ApexQuant Institucional.mq5,XAUUSD NeurAlgo M1.mq5,apexquant,neur_algo
+0.5817,ApexQuant Institucional BTCUSD.mq5,APEXQUANT_V79_ASYMMETRIC.mq5,apexquant,apexquant
+0.5814,ApexQuant MQL5.mq5,AQDSV7.6 Gemini 3.5 Pro.mq5,apexquant,apexquant
+0.5802,ApexQuant Institucional.mq5,NeurAlgo V80.mq5,apexquant,neur_algo
+0.5780,ApexQuant Institucional.mq5,BTCUSD NeurAlgo M1.mq5,apexquant,neur_algo
+0.5770,APEXQUANT - V7.7-PRO.mq5,AQDSV7.6 Gemini 3.5 Pro.mq5,apexquant,apexquant
+0.5769,ApexQuant Institucional BTCUSD.mq5,BTCUSD NeurAlgo M1.mq5,apexquant,neur_algo
+0.5757,ApexQuant Institucional BTCUSD.mq5,XAUUSD NeurAlgo M1.mq5,apexquant,neur_algo
+0.5742,ApexQuant Institucional BTCUSD.mq5,NeurAlgo V80.mq5,apexquant,neur_algo
+0.5724,APEXQUANT_V78_DYNAMIC.mq5,Gemini BTCUSD.mq5,apexquant,other
+0.5696,ApexQuant BTCUSD.mq5,DiegoSaenz.mq5,apexquant,other
+0.5694,AQDSV7.6 Gemini 3.5 Pro.mq5,Gemini.mq5,apexquant,other
+0.5688,AQDSV7.6 Gemini 3.5 Pro.mq5,DiegoSaenz 24h.mq5,apexquant,other
+0.5683,AQDSV7.6 Gemini 3.5 Pro.mq5,prueba.mq5,apexquant,other
+0.5602,ApexQuant MQL5.mq5,test.mq5,apexquant,other
+0.5551,APEXQUANT - V7.7-PRO.mq5,test.mq5,apexquant,other
+0.5536,ApexQuant MQL5.mq5,DiegoSaenz 24h.mq5,apexquant,other
